@@ -49,35 +49,45 @@ console.log(shoppingList([
 
 function shoppingList(tableau) {
 
-var nbk, nba, nbb, nbp, nbo, nbpa;
-var panier;
-for (let i in tableau){
+var nbk = 0;
+var nba = 0;
+var nbb = 0;
+var nbp = 0;
+var nbo = 0;
+var nbpa = 0;
+var panier = [];
 
-	for (let j in panier){
-		if (panier[j] ==="orange"){
-			nbo++;
-		}
-		else if (panier[j] ==="ananas"){
-                        nba++;
-                }
-		else if (panier[j] ==="kiwi"){
-                        nbk++;
-                }
-		else if (panier[j] ==="prune"){
-                        nbp++;
-                }
-		else if (panier[j] ==="pamplemousse"){
-                        nbpa++;
-                }
-		if (panier[j] ==="orange"){
-                        nbo++;
-                }
-		return {
-				"orange":nbo,
-				"kiwi":nbk,
-				"prune":nbp,
-				"ananas":nba,
-				"pamplemousse":nbpa,
-			}
-	tableau.push(panier);
-}
+    for (let i in tableau){
+
+    panier = tableau[i];
+
+    	for (let j in panier){
+
+    		if (panier[j] ==="orange"){
+    			nbo++;
+    		}
+    		else if (panier[j] ==="ananas"){
+                            nba++;
+                    }
+    		else if (panier[j] ==="kiwi"){
+                            nbk++;
+                    }
+    		else if (panier[j] ==="prune"){
+                            nbp++;
+                    }
+    		else if (panier[j] ==="pamplemousse"){
+                            nbpa++;
+                    }
+    		else if (panier[j] ==="banane"){
+                            nbb++;
+                    }
+        }
+    }
+
+return {    
+    "orange" : nbo,
+    "kiwi" : nbk,
+    "prune" :nbp,
+    "ananas" :nba,
+    "pamplemousse" :nbpa,
+}}
