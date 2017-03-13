@@ -36,12 +36,48 @@
 
 */
 
-shoppingList([
+console.log(shoppingList([
     ["orange", "orange", "kiwi", "ananas"],
     ["kiwi", "ananas", "banane", "prune"],
     ["orange", "orange", "orange", "orange"],
     ["orange", "orange", "kiwi", "kiwi"],
     ["prune", "banane", "pamplemousse", "ananas"]
-]);
+]))
+;
 
 //  écrire votre code sous ce commentaire
+
+function shoppingList(tableau) {
+
+var nbk, nba, nbb, nbp, nbo, nbpa;
+var panier;
+for (let i in tableau){
+
+	for (let j in panier){
+		if (panier[j] ==="orange"){
+			nbo++;
+		}
+		else if (panier[j] ==="ananas"){
+                        nba++;
+                }
+		else if (panier[j] ==="kiwi"){
+                        nbk++;
+                }
+		else if (panier[j] ==="prune"){
+                        nbp++;
+                }
+		else if (panier[j] ==="pamplemousse"){
+                        nbpa++;
+                }
+		if (panier[j] ==="orange"){
+                        nbo++;
+                }
+		return {
+				"orange":nbo,
+				"kiwi":nbk,
+				"prune":nbp,
+				"ananas":nba,
+				"pamplemousse":nbpa,
+			}
+	tableau.push(panier);
+}
